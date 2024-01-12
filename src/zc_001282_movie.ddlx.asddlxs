@@ -1,0 +1,41 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:
+{
+    typeNamePlural: 'Movies',
+    title.value: 'Title',
+    description.value: 'PublishingYear'
+}
+annotate view ZC_001282_MOVIE with
+{
+  /*Facets*/
+  @UI.facet:
+  [
+    { position:10, label: 'Movie Details', type: #FIELDGROUP_REFERENCE, targetQualifier: 'Details' }
+//    { position:20, label: 'Ratings', type:#LINEITEM_REFERENCE, targetElement: '_Rating'}
+  ]
+
+
+
+  @UI.lineItem: [{ position:10 }]
+  @UI.selectionField: [{ position:10 }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 10 }]
+  MoviePoster;
+  //  MovieUuid;
+  @UI.lineItem: [{ position:20 }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 20}]
+  Title;
+  @UI.lineItem: [{ position:30 }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 30}]
+  Genre;
+  @UI.lineItem: [{ position:40 }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 40}]
+    PublishingYear;
+  @UI.lineItem: [{ position:50 }]
+  @UI.fieldGroup: [{ qualifier: 'Details', position: 50}]
+    RuntimeInMin;
+  //  CreatedAt;
+  //  CreatedBy;
+  //  LastChangedAt;
+  //  LastChangedBy;
+  //  Rating;
+}

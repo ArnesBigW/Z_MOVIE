@@ -1,0 +1,36 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:
+{
+  typeNamePlural: 'Ratings',
+  title.value: 'UserName',
+  description.value: 'Rating'
+}
+annotate view ZC_001282_RATING with
+{
+
+  /* Facets */
+  @UI.facet:
+  [
+    {
+    position: 10,
+    type: #FIELDGROUP_REFERENCE,
+    label: 'Ratings',
+    targetQualifier: 'Ratings'
+    }
+  ]
+
+
+
+  //  RatingUuid;
+  //  MovieUuid;
+  @UI.lineItem: [{ position:10 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'Ratings' }]
+  UserName;
+  @UI.lineItem: [{ position:20 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'Ratings' }]
+  Rating;
+  @UI.lineItem: [{ position:30 }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'Ratings' }]
+  RatingDate;
+
+}
